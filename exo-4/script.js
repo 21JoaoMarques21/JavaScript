@@ -13,7 +13,8 @@ secretMessage.pop();
 secretMessage.push('to', 'program');
 
 // 3. Changer le mot 'easily' en 'right' en accédant à l'index correct
-secretMessage[4] = 'right';  // L'index de 'easily' est 4
+const indexOfEasily = secretMessage.indexOf('easily');
+secretMessage[indexOfEasily] = 'right';  // L'index de 'easily' est 6
 
 // 4. Supprimer le premier élément du tableau
 secretMessage.shift();
@@ -22,7 +23,8 @@ secretMessage.shift();
 secretMessage.unshift('Programming');
 
 // 6. Remplacer la série de cinq mots : 'get', 'right', 'the', 'first', 'time' par un seul mot : 'know'
-secretMessage.splice(2, 5, 'know'); // À partir de l'index 2, on supprime 5 éléments et on les remplace par 'know'
+const indexOfGet = secretMessage.indexOf('get');
+secretMessage[indexOfGet] = 'know';
 
 // 7. Utiliser la méthode .join pour afficher le message secret dans la console
 console.log(secretMessage.join(' ')); // Affiche le message en une seule chaîne
